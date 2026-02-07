@@ -1,0 +1,15 @@
+name : Docker Automation
+on:
+    push:
+        branches:
+            -main
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+          - name: checkout code files
+            uses: actions/checkout@v4
+          - name: build docker image
+            run: docker build -t 8byte-intern-app .
+          - name: image verification
+            run: docker images
