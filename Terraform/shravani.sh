@@ -4,4 +4,4 @@ sudo systemctl enable docker
 sudo systemctl start docker
 sudo usermod -aG docker ubuntu
 docker pull shravanychandhana/8byte-intern-app
-docker run -p 3000:3000 shravanychandhana/8byte-intern-app
+docker run -d -p 3000:3000 shravanychandhana/8byte-intern-app
